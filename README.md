@@ -13,6 +13,8 @@ As = Volltreffer
 
 Beide dateien (py und mp3) ins gleiche Verzeichnis kopieren und mittels ./kc.py im Terminal starten.
 
+Wenn "no module click" erscheint, dann mit 'pip install click' dieses Paket installieren.
+
 PS:
 
 Hab das Teil in 5h gecodet
