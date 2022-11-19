@@ -131,5 +131,6 @@ while True:
     spiel+=1
     if spiel == 10:
         print("Spiel verloren!")
-        time.sleep(5)
+        print("Die gesuchte Nummer war: "+str(ziffer1)+str(ziffer2)+str(ziffer3))
+        time.sleep(10)
         sys.exit()
