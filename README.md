@@ -1,4 +1,4 @@
-# KC---Karussell-Computerspiel-TV-DRS-1982
+# KC - Karussell Computerspiel TV DRS 1982
 
 Kleines in der Konsole laufendes retro Game wie damals in der schweizer TV Sendung Karussell.
 Läuft unter Python3. Es ist simpel gehalten, sodass es eigentlich überall laufen sollte.
