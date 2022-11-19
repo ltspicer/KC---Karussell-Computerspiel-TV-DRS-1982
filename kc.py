@@ -46,7 +46,7 @@ print("                                       Eingabe")
 print()
 
 
-import random, sys, click
+import random, sys, click, time
 
 
 #### Zahlen generieren
@@ -83,6 +83,8 @@ while True:
                 i = 0
                 print_there(40, "   ")
             if eingabe == "q":
+                print("Spiel beendet")
+                time.sleep(3)
                 exit()
             if eingabe == '0' or eingabe == '1' or eingabe == '2' or eingabe == '3' or eingabe == '4' or eingabe == '5' or eingabe == '6' or eingabe == '7' or eingabe == '8' or eingabe == '9':
                 if i == 0:
@@ -124,8 +126,10 @@ while True:
     print("Spiel", spiel, "=", str(num1) + str(num2) + str(num3), antwort)
     if antwort == "As As As ":
         print("Spiel gewonnen!")
-        exit()
+        time.sleep(5)
+        sys.exit()
     spiel+=1
     if spiel == 10:
         print("Spiel verloren!")
-        exit()
+        time.sleep(5)
+        sys.exit()
