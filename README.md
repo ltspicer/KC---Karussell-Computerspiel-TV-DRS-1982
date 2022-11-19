@@ -18,3 +18,6 @@ Wenn "no module click" erscheint, dann mit 'pip install click' dieses Paket inst
 PS:
 
 Hab das Teil in 5h gecodet
+
+Win & Linux komplett Pakete (ohne Python Installation) bei:
+https://ltspicer.itch.io/kc-karussell-computerspiel-tv-drs-1982
