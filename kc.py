@@ -9,9 +9,6 @@
 #         TV DRS 1982          #
 ################################
 
-print()
-print("Soundtrack by Jean-Michel Jarre -- Copyright: https://www.youtube.com/watch?v=hD4KMp22jBg")
-print()
 
 pygameok = 1
 try:
@@ -26,6 +23,9 @@ if pygameok == 1:
     try:
         mixer.music.load("Oxygen2.mp3")
         mixer.music.play(-1)
+        print()
+        print("Soundtrack by Jean-Michel Jarre -- Copyright: https://www.youtube.com/watch?v=hD4KMp22jBg")
+        print()
     except Exception as e:
         print("Musikdatei nicht gefunden. Spiel läuft ohne Musik!")
         pygameok = 0
