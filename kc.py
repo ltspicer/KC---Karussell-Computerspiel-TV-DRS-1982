@@ -96,7 +96,7 @@ while True:
             if eingabe == "q":
                 print("Spiel beendet")
                 time.sleep(3)
-                exit()
+                sys.exit()
             if eingabe == '0' or eingabe == '1' or eingabe == '2' or eingabe == '3' or eingabe == '4' or eingabe == '5' or eingabe == '6' or eingabe == '7' or eingabe == '8' or eingabe == '9':
                 if i == 0:
                     num1 = int(eingabe)
