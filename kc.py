@@ -9,7 +9,9 @@
 #         TV DRS 1982          #
 ################################
 
-# Soundtrack by Jean-Michel Jarre -- Copyright: https://www.youtube.com/watch?v=hD4KMp22jBg
+print()
+print("Soundtrack by Jean-Michel Jarre -- Copyright: https://www.youtube.com/watch?v=hD4KMp22jBg")
+print()
 
 pygameok = 1
 try:
@@ -48,6 +50,7 @@ print()
 
 import random, sys, click, time
 
+my_os=sys.platform
 
 #### Zahlen generieren
 
@@ -69,8 +72,16 @@ spiel = 1
 #### Eingabe anzeigen
 
 def print_there(y, text):
-     sys.stdout.write("\x1b7\x1b[%d;%df%s\x1b8" % (40, y, text))
-     sys.stdout.flush()
+    #          my_os=
+    #`win32`   for Windows(Win32)
+    #'cygwin'  for Windows(cygwin)
+    #'darwin'  for macOS
+    #'aix'     for AIX
+    if my_os == "win32":
+        return
+    if my_os == "linux" or my_os == "darwin":
+        sys.stdout.write("\x1b7\x1b[%d;%df%s\x1b8" % (40, y, text))
+        sys.stdout.flush()
 
 #### Spielschlaufe
 
@@ -131,6 +142,5 @@ while True:
     spiel+=1
     if spiel == 10:
         print("Spiel verloren!")
-        print("Die gesuchte Nummer war: "+str(ziffer1)+str(ziffer2)+str(ziffer3))
-        time.sleep(10)
+        time.sleep(5)
         sys.exit()
