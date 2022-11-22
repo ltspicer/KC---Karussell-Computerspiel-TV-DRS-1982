@@ -87,27 +87,13 @@ def clearConsole():
         command = 'cls'
     os.system(command)
 
-#### Terminal neu schreiben
+#### Konsole neu schreiben
 
 def printTerminal():
     for i in range(0, len(text)):
         print(text[i])
 
-#### Eingabe anzeigen
-
-def print_there(y, text):
-    #          my_os=
-    #`win32`   for Windows(Win32)
-    #'cygwin'  for Windows(cygwin)
-    #'darwin'  for macOS
-    #'aix'     for AIX
-    if my_os == "win32":
-        return
-    if my_os == "linux" or my_os == "darwin":
-        sys.stdout.write("\x1b7\x1b[%d;%df%s\x1b8" % (40, y, text))
-        sys.stdout.flush()
-
-#### Spielschlaufe
+#### Hauptschleife
 
 while True:
     while True:
