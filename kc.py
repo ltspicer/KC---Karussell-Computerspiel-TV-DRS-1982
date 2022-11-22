@@ -30,25 +30,36 @@ if pygameok == 1:
         print("Musikdatei nicht gefunden. Spiel läuft ohne Musik!")
         pygameok = 0
 
+text = ["################################",
+"# KC - Karussell Computerspiel #",
+"#         TV DRS 1982          #",
+"################################",
+" ",
+" ",
+"Finde die 3-stellige Zahl.",
+"Du hast 9 Spielzüge. Viel Glück.",
+"c = aktuelle Eingabe löschen",
+"q = Spiel abbrechen",
+" ",
+" "]
 
 print()
-print()
-print("################################")
-print("# KC - Karussell Computerspiel #")
-print("#         TV DRS 1982          #")
-print("################################")
-print()
-print()
-print("Finde die 3-stellige Zahl.")
-print("Du hast 9 Spielzüge. Viel Glück.")
-print("c = neue Eingabe")
-print("q = Spiel abbrechen")
-print()
-print("                                       Eingabe")
+print(text[0])
+print(text[1])
+print(text[2])
+print(text[3])
+print(text[4])
+print(text[5])
+print(text[6])
+print(text[7])
+print(text[8])
+print(text[9])
+print(text[10])
+print("Gib jetzt die ersten 3 Zahlen ein.")
+print("Eingabe:")
 print()
 
-
-import random, sys, click, time
+import random, sys, click, time, os
 
 my_os=sys.platform
 
@@ -68,6 +79,19 @@ while True:
 
 spiel = 1
 
+#### Konsole löschen
+
+def clearConsole():
+    command = 'clear'
+    if my_os == "win32":  # If Machine is running on Windows, use cls
+        command = 'cls'
+    os.system(command)
+
+#### Terminal neu schreiben
+
+def printTerminal():
+    for i in range(0, len(text)):
+        print(text[i])
 
 #### Eingabe anzeigen
 
@@ -92,26 +116,30 @@ while True:
             eingabe = click.getchar()   # Gets a single character
             if eingabe == "c":
                 i = 0
-                print_there(40, "   ")
+                clearConsole()
+                printTerminal()
             if eingabe == "q":
                 print("Spiel beendet")
                 time.sleep(3)
                 sys.exit()
             if eingabe == '0' or eingabe == '1' or eingabe == '2' or eingabe == '3' or eingabe == '4' or eingabe == '5' or eingabe == '6' or eingabe == '7' or eingabe == '8' or eingabe == '9':
+                clearConsole()
+                printTerminal()
                 if i == 0:
                     num1 = int(eingabe)
-                    print_there(40, str(num1))
+                    print(str(num1))
                 if i == 1:
                     num2 = int(eingabe)
-                    print_there(41, str(num2))
+                    print(str(num1)+str(num2))
                 if i == 2:
                     num3 = int(eingabe)
-                    print_there(42, str(num3))
+                    print(str(num1)+str(num2)+str(num3))
                 i+=1
 
         if num1 != num2 and num1 != num3 and num2 != num3:
             break
-        print_there(40, "   ")
+        clearConsole()
+        printTerminal()
 
     antwort = ""
     if ziffer1 == num1:
@@ -133,8 +161,9 @@ while True:
     if ziffer3 == num2:
         antwort+="Gut "
 
-    print_there(40, "   ")
-    print("Spiel", spiel, "=", str(num1) + str(num2) + str(num3), antwort)
+    clearConsole()
+    text.append("Spiel " + str(spiel) + " = " + str(num1) + str(num2) + str(num3) + " " + antwort)
+    printTerminal()
     if antwort == "As As As ":
         print("Spiel gewonnen!")
         time.sleep(5)
@@ -142,5 +171,6 @@ while True:
     spiel+=1
     if spiel == 10:
         print("Spiel verloren!")
+        print("Die gesuchte Zahl wäre "+str(ziffer1)+str(ziffer2)+str(ziffer3)+" gewesen.")
         time.sleep(5)
         sys.exit()
