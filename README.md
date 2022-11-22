@@ -15,9 +15,6 @@ Beide dateien (py und mp3) ins gleiche Verzeichnis kopieren und mittels ./kc.py 
 
 Wenn "no module click" erscheint, dann mit 'pip install click' dieses Paket installieren.
 
-PS:
 
-Hab das Teil in 5h gecodet
-
-Win & Linux komplett Pakete (ohne Python Installation) bei:
+Win & Linux komplett Pakete (keine Python Installation notwendig) bei:
 https://ltspicer.itch.io/kc-karussell-computerspiel-tv-drs-1982
