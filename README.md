@@ -11,7 +11,9 @@ Gut = Zahl vorhanden, aber an falscher Stelle
 
 As = Volltreffer
 
-Beide dateien (py und mp3) ins gleiche Verzeichnis kopieren und mittels ./kc.py im (Linux) Terminal starten.
+Beide dateien (py und mp3) ins gleiche Verzeichnis kopieren.
+
+In Linux im Terminal (im Spielverzeichnis) mit ./kc.py starten.
 
 In Windows kc.py doppelklicken.
 
