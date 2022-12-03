@@ -13,7 +13,7 @@ As = Volltreffer
 
 Beide dateien (py und mp3) ins gleiche Verzeichnis kopieren.
 
-In Linux im Terminal (im Spielverzeichnis) mit ./kc.py starten.
+In Unix Systemen (Linux, OSX) im Terminal (im Spielverzeichnis) mit ./kc.py starten.
 
 In Windows kc.py doppelklicken.
 
