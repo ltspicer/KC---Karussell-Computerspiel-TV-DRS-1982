@@ -11,7 +11,7 @@ Gut = Zahl vorhanden, aber an falscher Stelle
 
 As = Volltreffer
 
-Beide dateien (py und mp3) ins gleiche Verzeichnis kopieren.
+Beide dateien (kc.py und Oxigen2.mp3) ins gleiche Verzeichnis kopieren.
 
 In Unix Systemen (Linux, OSX) im Terminal (im Spielverzeichnis) mit ./kc.py starten.
 
@@ -34,6 +34,10 @@ The 3-digit number must be found in 9 moves.
 Gut = number present but in wrong place
 
 As = direct hit
+
+Move both files (kc.py und Oxigen2.mp3) in the same directory and start it in Linux terminal with ./kc.py or double click it in Windows.
+
+Have fun
 
 ------------------------------
 
