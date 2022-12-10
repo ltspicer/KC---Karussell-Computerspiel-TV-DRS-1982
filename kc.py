@@ -58,6 +58,7 @@ print(text[10])
 print("Gib jetzt die ersten 3 Zahlen ein.")
 print("Eingabe:")
 print()
+print('\033[?25l', end="")
 
 import random, sys, click, time, os
 
@@ -106,6 +107,7 @@ while True:
                 printTerminal()
             if eingabe == "q":
                 print("Spiel beendet")
+                print('\033[?25h', end="")
                 time.sleep(3)
                 sys.exit()
             if eingabe == '0' or eingabe == '1' or eingabe == '2' or eingabe == '3' or eingabe == '4' or eingabe == '5' or eingabe == '6' or eingabe == '7' or eingabe == '8' or eingabe == '9':
