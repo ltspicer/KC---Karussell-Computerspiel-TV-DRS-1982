@@ -94,8 +94,8 @@ def clear_console():
 #### Konsole neu schreiben
 
 def print_terminal():
-    for z in enumerate(text):
-        print(z)
+    for z, zeile in enumerate(text):
+        print(zeile)
 
 #### Hauptschleife
 
