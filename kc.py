@@ -9,26 +9,31 @@
 #         TV DRS 1982          #
 ################################
 
+import os
+import sys
+import time
+import random
+import click
 
-pygameok = 1
-try:
-    from pygame import mixer
-except ImportError as e:
-    print("Kein pygame installiert. Spiel läuft ohne Musik!")
-    pygameok = 0
-
-if pygameok == 1:
-    mixer.init()
-    mixer.music.set_volume(0.3)
+if os.path.exists("Oxygen2.mp3"):
+    PYGAME_OK = 1
     try:
+        from pygame import mixer
+    except ImportError:
+        print("Kein pygame installiert. Spiel läuft ohne Musik!")
+        PYGAME_OK = 0
+
+    if PYGAME_OK == 1:
+        mixer.init()
+        mixer.music.set_volume(0.3)
         mixer.music.load("Oxygen2.mp3")
         mixer.music.play(-1)
         print()
-        print("Soundtrack by Jean-Michel Jarre -- Copyright: https://www.youtube.com/watch?v=hD4KMp22jBg")
+        print("Soundtrack by Jean-Michel Jarre -- Copyright:\
+            https://www.youtube.com/watch?v=hD4KMp22jBg")
         print()
-    except Exception as e:
-        print("Musikdatei nicht gefunden. Spiel läuft ohne Musik!")
-        pygameok = 0
+else:
+    print("Musikdatei nicht gefunden. Spiel läuft ohne Musik!")
 
 text = ["################################",
 "# KC - Karussell Computerspiel #",
@@ -60,9 +65,7 @@ print("Eingabe:")
 print()
 print('\033[?25l', end="")
 
-import random, sys, click, time, os
-
-my_os=sys.platform
+MY_OS=sys.platform
 
 #### Zahlen generieren
 
@@ -78,21 +81,21 @@ while True:
 
 #print(ziffer1, ziffer2, ziffer3)
 
-spiel = 1
+SPIEL = 1
 
 #### Konsole löschen
 
-def clearConsole():
+def clear_console():
     command = 'clear'
-    if my_os == "win32":  # If Machine is running on Windows, use cls
+    if MY_OS == "win32":  # If Machine is running on Windows, use cls
         command = 'cls'
     os.system(command)
 
 #### Konsole neu schreiben
 
-def printTerminal():
-    for i in range(0, len(text)):
-        print(text[i])
+def print_terminal():
+    for z in enumerate(text):
+        print(z)
 
 #### Hauptschleife
 
@@ -103,16 +106,18 @@ while True:
             eingabe = click.getchar()   # Gets a single character
             if eingabe == "c":
                 i = 0
-                clearConsole()
-                printTerminal()
+                clear_console()
+                print_terminal()
             if eingabe == "q":
                 print("Spiel beendet")
                 print('\033[?25h', end="")
                 time.sleep(3)
                 sys.exit()
-            if eingabe == '0' or eingabe == '1' or eingabe == '2' or eingabe == '3' or eingabe == '4' or eingabe == '5' or eingabe == '6' or eingabe == '7' or eingabe == '8' or eingabe == '9':
-                clearConsole()
-                printTerminal()
+            if eingabe == '0' or eingabe == '1' or eingabe == '2' or eingabe == '3' or\
+               eingabe == '4' or eingabe == '5' or eingabe == '6' or eingabe == '7' or\
+               eingabe == '8' or eingabe == '9':
+                clear_console()
+                print_terminal()
                 if i == 0:
                     num1 = int(eingabe)
                     print(str(num1))
@@ -126,38 +131,38 @@ while True:
 
         if num1 != num2 and num1 != num3 and num2 != num3:
             break
-        clearConsole()
-        printTerminal()
+        clear_console()
+        print_terminal()
 
-    antwort = ""
+    ANTWORT = ""
     if ziffer1 == num1:
-        antwort+="As "
+        ANTWORT+="As "
     if ziffer2 == num2:
-        antwort+="As "
+        ANTWORT+="As "
     if ziffer3 == num3:
-        antwort+="As "
+        ANTWORT+="As "
     if ziffer1 == num2:
-        antwort+="Gut "
+        ANTWORT+="Gut "
     if ziffer1 == num3:
-        antwort+="Gut "
+        ANTWORT+="Gut "
     if ziffer2 == num1:
-        antwort+="Gut "
+        ANTWORT+="Gut "
     if ziffer2 == num3:
-        antwort+="Gut "
+        ANTWORT+="Gut "
     if ziffer3 == num1:
-        antwort+="Gut "
+        ANTWORT+="Gut "
     if ziffer3 == num2:
-        antwort+="Gut "
+        ANTWORT+="Gut "
 
-    clearConsole()
-    text.append("Spiel " + str(spiel) + " = " + str(num1) + str(num2) + str(num3) + " " + antwort)
-    printTerminal()
-    if antwort == "As As As ":
+    clear_console()
+    text.append("Spiel " + str(SPIEL) + " = " + str(num1) + str(num2) + str(num3) + " " + ANTWORT)
+    print_terminal()
+    if ANTWORT == "As As As ":
         print("Spiel gewonnen!")
         time.sleep(5)
         sys.exit()
-    spiel+=1
-    if spiel == 10:
+    SPIEL+=1
+    if SPIEL == 10:
         print("Spiel verloren!")
         print("Die gesuchte Zahl wäre "+str(ziffer1)+str(ziffer2)+str(ziffer3)+" gewesen.")
         time.sleep(5)
