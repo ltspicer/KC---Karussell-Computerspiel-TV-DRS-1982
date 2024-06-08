@@ -23,6 +23,12 @@ Wenn "no module click" erscheint, dann mit 'pip install click' dieses Paket inst
 Win & Linux komplett Pakete (keine Python Installation notwendig) bei:
 https://ltspicer.itch.io/kc-karussell-computerspiel-tv-drs-1982
 
+oder
+
+Windows: kc.exe
+
+Linux: kc (start mit ./starter.sh)
+
 ------------------------------
 
 Small retro game running in the console like back then in the Swiss TV show Karussell. Runs on Python3. It's kept simple so it should work anywhere.
