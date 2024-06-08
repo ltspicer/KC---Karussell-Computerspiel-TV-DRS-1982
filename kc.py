@@ -159,11 +159,11 @@ while True:
     print_terminal()
     if ANTWORT == "As As As ":
         print("Spiel gewonnen!")
-        time.sleep(5)
+        input("ENTER zum beenden/Press ENTER to exit")
         sys.exit()
     SPIEL+=1
     if SPIEL == 10:
         print("Spiel verloren!")
         print("Die gesuchte Zahl wäre "+str(ziffer1)+str(ziffer2)+str(ziffer3)+" gewesen.")
-        time.sleep(5)
+        input("ENTER zum beenden/Press ENTER to exit")
         sys.exit()
