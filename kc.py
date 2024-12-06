@@ -29,8 +29,9 @@ if os.path.exists("Oxygen2.mp3"):
         mixer.music.load("Oxygen2.mp3")
         mixer.music.play(-1)
         print()
-        print("Soundtrack by Jean-Michel Jarre -- Copyright:\
-            https://www.youtube.com/watch?v=hD4KMp22jBg")
+        print("Soundtrack by Jean-Michel Jarre")
+        print("Copyright:")
+        print("https://www.youtube.com/watch?v=hD4KMp22jBg")
         print()
 else:
     print("Musikdatei nicht gefunden. Spiel läuft ohne Musik!")
