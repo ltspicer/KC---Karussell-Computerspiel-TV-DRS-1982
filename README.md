@@ -28,11 +28,9 @@ Starten mit:
 
 Windows: **kc.exe**
 
-Linux: **kc** (start mit **./starter.sh**)
+Linux: **./starter.sh**
 
-BASH Konsole: **./kc.sh** (bei Windows wird WSL benötigt). Keine Hintergrundmusik.
-
-Nicht vergessen, die **kc.sh ausführbar zu machen!**
+BASH Konsole: **./kc.sh** (bei Windows wird WSL benötigt). Keine Hintergrundmusik. Nicht vergessen, die **kc.sh ausführbar zu machen!**
 
 ------------------------------
 
