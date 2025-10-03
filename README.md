@@ -30,7 +30,7 @@ Windows: **kc.exe**
 
 Linux: **kc** (start mit **./starter.sh**)
 
-**./kc.sh** kann direkt in der BASH Konsole gestartet werden (bei Windows wird WSL benötigt), hat aber keine Hintergrundmusik.
+BASH Konsole: **./kc.sh** (bei Windows wird WSL benötigt). Keine Hintergrundmusik.
 
 Nicht vergessen, die **kc.sh ausführbar zu machen!**
 
