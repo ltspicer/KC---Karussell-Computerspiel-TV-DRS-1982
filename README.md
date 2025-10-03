@@ -21,14 +21,16 @@ Wenn "no module click" erscheint, dann mit 'pip install click' dieses Paket inst
 
 ------------------------------
 
-Win & Linux komplett Pakete (keine Python Installation notwendig) bei:
+Bei den Win & Linux komplett Paketen ist keine Python Installation notwendig. Download bei:
 https://ltspicer.itch.io/kc-karussell-computerspiel-tv-drs-1982
 
-oder
 
-Windows: kc.exe
 
-Linux: kc (start mit ./starter.sh)
+Windows: **kc.exe**
+
+Linux: **kc** (start mit **./starter.sh**)
+
+**kc.sh** kann direkt in der BASH Konsole gestartet werden (bei Windows wird WSL benötigt), hat aber keine Hintergrundmusik.
 
 ------------------------------
 
